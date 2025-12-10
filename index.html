@@ -1,1 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Fredlan “Pams” Mpama, PhD | Author • Speaker • Consultant • Executive • Educator</title>
+  <meta name="description" content="Official personal brand site of Dr. Fredlan Pams — Author, Speaker, Consultant, Executive Educator, AHA Instructor, Safety & HR Leader, and PhD in Organizational Leadership.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --white: #ffffff;
+      --gray-50: #f8f9fc;
+      --gray-100: #edf2f7;
+      --gray-200: #e5e7eb;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-900: #111827;
+      --brand: #0f8a44;
+      --brand-soft: #3db56d;
+      --brand-yellow: #e1b800;
+      --brand-red: #d64545;
+      --radius: 24px;
+      --shadow: 0 14px 32px rgba(0,0,0,0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: var(--gray-50);
+      color: var(--gray-900);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* HEADER */
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      padding: 1.1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 3px solid var(--brand);
+      object-fit: cover;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      max-width: 600px;
+    }
+
+    nav a {
+      margin-left: 1.2rem;
+      font-weight: 500;
+      color: var(--gray-900);
+      font-size: 0.95rem;
+      position: relative;
+      padding-bottom: 2px;
+      transition: 0.2s;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--brand);
+      transition: width 0.2s ease-out;
+    }
+
+    nav a:hover { color: var(--brand); }
+    nav a:hover::after { width: 100%; }
+
+    /* HERO */
+    .hero {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 4.5rem 2rem 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--brand);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span { color: var(--brand); }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--gray-600);
+      margin-bottom: 1.8rem;
+      max-width: 90%;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.6rem;
+      font-size: 0.8rem;
+    }
+
+    .tag-pill {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--gray-200);
+      background: #ffffff;
+      color: var(--gray-600);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 0.95rem 1.9rem;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      border: 2px solid var(--brand);
+      color: var(--brand);
+    }
+
+    .hero-right img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    /* UNIVERSAL SECTION */
+    .section {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.3rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+    }
+
+    .section p.center {
+      text-align: center;
+      max-width: 780px;
+      margin: 0.5rem auto 2.3rem auto;
+      color: var(--gray-600);
+      font-size: 1.05rem;
+    }
+
+    /* STATS STRIP */
+    .stats-strip {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 0 2rem 0 2rem;
+    }
+
+    .stats-row {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.4rem 1.8rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .stat-label { color: var(--gray-600); font-size: 0.8rem; }
+    .stat-value { font-size: 1.1rem; font-weight: 600; color: var(--brand); }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .about-grid img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-grid p {
+      color: var(--gray-600);
+      font-size: 1.02rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .about-list {
+      margin-top: 0.8rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .about-list strong { color: var(--gray-900); }
+
+    /* GRID SECTIONS */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 1.9rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.16);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.25rem;
+      color: var(--brand);
+    }
+
+    .card small { color: var(--gray-400); }
+
+    .card ul { margin-top: 0.6rem; padding-left: 1.1rem; }
+    .card ul li { margin-bottom: 0.25rem; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      max-width: 1250px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem 2rem;
+    }
+
+    .cta-inner {
+      background: linear-gradient(90deg, var(--brand) 0%, var(--brand-soft) 40%, var(--brand-yellow) 100%);
+      border-radius: var(--radius);
+      padding: 1.8rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-inner p {
+      max-width: 600px;
+      font-size: 0.98rem;
+    }
+
+    .cta-inner a {
+      background: var(--white);
+      color: var(--brand);
+      padding: 0.8rem 1.6rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      margin-top: 0.8rem;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .service {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+
+    .service h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+      color: var(--brand);
+    }
+
+    .service ul { margin-top: 0.4rem; padding-left: 1.1rem; }
+    .service li { margin-bottom: 0.2rem; }
+
+    /* TOPICS */
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .topic {
+      background: var(--white);
+      padding: 1.7rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--brand);
+      font-size: 0.98rem;
+      color: var(--gray-600);
+    }
+
+    .topic h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+      color: var(--gray-900);
+    }
+
+    /* AUTHOR GRID */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .book {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      text-align: left;
+      font-size: 0.95rem;
+      color: var(--gray-600);
+    }
+
+    .book-title { font-weight: 600; color: var(--gray-900); margin-bottom: 0.3rem; }
+    .book-tag { font-size: 0.8rem; color: var(--brand); margin-bottom: 0.6rem; }
+
+    /* TESTIMONIALS */
+    .testimonials-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .testimonial {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.6rem;
+      font-size: 0.9rem;
+      color: var(--gray-600);
+    }
+
+    .testimonial strong { display: block; margin-top: 0.6rem; color: var(--gray-900); }
+    .testimonial small { color: var(--gray-400); }
+
+    /* CONTACT */
+    .contact-box {
+      max-width: 650px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.96rem;
+      color: var(--gray-600);
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-item strong { display: block; color: var(--gray-900); }
+    .contact-item a { color: var(--brand); }
+
+    /* FOOTER */
+    .footer {
+      background: var(--white);
+      padding: 2rem;
+      text-align: center;
+      color: var(--gray-600);
+      margin-top: 4rem;
+      border-top: 1px solid var(--gray-200);
+      font-size: 0.85rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 960px) {
+      header {
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      nav { justify-content: flex-start; }
+
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { order: -1; }
+
+      .stats-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about-grid { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .topics { grid-template-columns: 1fr; }
+      .books-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .testimonials-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+      .cta-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .stats-row,
+      .card-grid,
+      .services-grid,
+      .books-grid,
+      .testimonials-row { grid-template-columns: 1fr; }
+
+      header { padding: 1rem; }
+      .hero { padding: 3.5rem 1.2rem 3rem 1.2rem; }
+      .section { padding: 3rem 1.2rem; }
+      .cta-banner { padding: 0 1.2rem 3rem 1.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <img src="assets/drpams.jpg" alt="Dr Pams Photo" />
+      <div>
+        <strong style="font-size:1.2rem;">Dr. Fredlan “Pams” Mpama, PhD</strong><br />
+        <small>Author • Speaker • AHA Instructor • Safety & HR Leader • Executive Educator</small>
+      </div>
+    </div>
+
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#aha">AHA Training</a>
+      <a href="#services">Consulting</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#author">Author</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-left">
+      <div class="hero-kicker">Author • Speaker • Consultant • Executive • Educator</div>
+      <h1 class="hero-title" id="hero-title">Empowering People, Elevating Organizations, <span>Transforming Leaders</span></h1>
+      <p class="hero-subtitle">
+        I help organizations and individuals grow through AHA-certified training, safety and HR strategy, and leadership development grounded in emotional intelligence and transformational leadership.
+      </p>
+
+      <div class="hero-tags" aria-label="Key focus areas">
+        <span class="tag-pill">AHA CPR • BLS • First Aid</span>
+        <span class="tag-pill">CSP • SPHR • PMP • CHMM</span>
+        <span class="tag-pill">PhD in Organizational Leadership</span>
+        <span class="tag-pill">Bilingual / Multicultural Experience</span>
+      </div>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact"><i class="fa-solid fa-heart-pulse"></i> Book AHA Training</a>
+        <a class="btn-secondary" href="assets/Dr-Pams-Media-Kit.pdf" download><i class="fa-solid fa-file-pdf"></i> Download Media & Speaker Kit</a>
+      </div>
+
+      <div class="hero-meta">
+        <strong>Based in Indianapolis, IN (US) • Serving organizations nationwide and internationally.</strong><br />
+        Available for training, consulting, executive education, and keynote speaking.
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="assets/hero2.jpg" alt="Dr Pams speaking or training" />
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip" aria-label="Quick profile stats">
+    <div class="stats-row">
+      <div>
+        <div class="stat-label">Experience</div>
+        <div class="stat-value">10+ years</div>
+        <div class="stat-label">Safety, HR, leadership, operations, and meteorology.</div>
+      </div>
+      <div>
+        <div class="stat-label">Education</div>
+        <div class="stat-value">PhD • MBA • BA</div>
+        <div class="stat-label">Leadership, Global Operations, Mathematics.</div>
+      </div>
+      <div>
+        <div class="stat-label">Credentials</div>
+        <div class="stat-value">AHA • CSP • SPHR • PMP</div>
+        <div class="stat-label">Plus CSM and CHMM certifications.</div>
+      </div>
+      <div>
+        <div class="stat-label">Focus</div>
+        <div class="stat-value">People & Systems</div>
+        <div class="stat-label">Training, culture, strategy, and execution.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>About Dr. Pams</h2>
+    <p class="center">Leadership is not a title. It is the day-to-day discipline of lifting people, protecting them, and helping them grow.</p>
+
+    <div class="about-grid">
+      <div>
+        <p>
+          Dr. Fredlan “Pams” Mpama is an author, speaker, leadership educator, consultant, and AHA Instructor who bridges academic rigor with real-world experience. His professional journey spans meteorology, environmental health and safety, human resources, and executive leadership across complex, highly regulated industries.
+        </p>
+        <p>
+          He holds a PhD in Leadership (Organizational Leadership), an MBA in Global Operations, and a BA in Mathematics. Dr. Pams has led and supported safety and HR initiatives on major projects and in organizations ranging from energy and construction to higher education and technology.
+        </p>
+        <p>
+          At the core of his work is a simple conviction: when you develop people’s skills, protect their safety, and coach their hearts, performance improves naturally. His research and practice focus on emotional intelligence, transformational leadership, psychological safety, and human performance.
+        </p>
+
+        <div class="about-list" aria-label="Snapshot of background">
+          <div>
+            <strong>Education</strong><br />
+            PhD, Leadership (Organizational Leadership)<br />
+            MBA, Global Operations<br />
+            BA, Mathematics
+          </div>
+          <div>
+            <strong>Credentials</strong><br />
+            AHA Instructor (CPR, BLS, First Aid)<br />
+            CSP • SPHR • PMP • CHMM • CSM
+          </div>
+          <div>
+            <strong>Experience</strong><br />
+            10+ years across HR, Safety, EHS, and operations.
+          </div>
+          <div>
+            <strong>Roles</strong><br />
+            Author • Speaker • Consultant • Executive • Educator.
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img src="assets/drpams2.jpg" alt="Portrait of Dr Pams" />
+      </div>
+    </div>
+  </section>
+
+  <!-- AHA TRAINING CENTER -->
+  <section class="section" id="aha">
+    <h2>AHA Training Center</h2>
+    <p class="center">
+      Lifesaving skills are the front door. From there, we build long-term relationships around safety, HR, and leadership.
+    </p>
+
+    <div class="card-grid">
+      <article class="card">
+        <h3>CPR & AED for Workplace and Community</h3>
+        <small>For workplaces, churches, schools & community groups.</small>
+        <ul>
+          <li>Adult, child, and infant CPR techniques.</li>
+          <li>Use of AEDs and emergency response basics.</li>
+          <li>Designed for non-clinical staff and volunteers.</li>
+          <li>Flexible scheduling for evenings, weekends, and events.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Basic Life Support (BLS)</h3>
+        <small>For healthcare and high-risk environments.</small>
+        <ul>
+          <li>Evidence-based AHA BLS curriculum.</li>
+          <li>Scenarios tailored to your actual clinical or field setting.</li>
+          <li>Ideal for clinics, hospitals, EMS, and safety-critical teams.</li>
+          <li>Initial certification and renewal options.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>First Aid & Emergency Response</h3>
+        <small>Customizable for your site and hazard profile.</small>
+        <ul>
+          <li>First aid fundamentals for injury and sudden illness.</li>
+          <li>Scenario-based learning built from your real risks.</li>
+          <li>Can be combined with CPR/AED training for maximum impact.</li>
+          <li>Great entry point for broader safety and culture work.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" aria-label="Training call to action">
+    <div class="cta-inner">
+      <p>
+        Ready to schedule an AHA training for your organization, church, or community group? Share your goals and preferred dates, and we will design a learning experience that fits your reality.
+      </p>
+      <a href="#contact"><i class="fa-solid fa-calendar-check"></i> Request AHA Training Date</a>
+    </div>
+  </section>
+
+  <!-- CONSULTING & SERVICES -->
+  <section class="section" id="services">
+    <h2>Consulting & Advisory Services</h2>
+    <p class="center">
+      Training opens the door. Consulting helps you build systems, structures, and cultures that last.
+    </p>
+
+    <div class="services-grid">
+      <div class="service">
+        <h3>Safety & EHS</h3>
+        <ul>
+          <li>OSHA-focused safety programs and coaching.</li>
+          <li>Emergency preparedness and response planning.</li>
+          <li>Fire safety, evacuation drills, and incident learning.</li>
+          <li>Hazardous materials awareness and EPA-aligned practices.</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <h3>HR & Compliance</h3>
+        <ul>
+          <li>Supervisor and manager training on HR essentials.</li>
+          <li>Policy, documentation, and investigation practices.</li>
+          <li>Onboarding, performance, and return-to-work alignment.</li>
+          <li>Connecting HR metrics to safety and culture outcomes.</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <h3>Leadership & Coaching</h3>
+        <ul>
+          <li>Individual coaching for emerging and frontline leaders.</li>
+          <li>Workshops on emotional intelligence and influence.</li>
+          <li>Team-based leadership labs using your real situations.</li>
+          <li>Executive education on transformational leadership.</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <h3>Workforce & Staffing</h3>
+        <ul>
+          <li>Guidance on staffing safety and HR-critical roles.</li>
+          <li>Role design and competency mapping.</li>
+          <li>Support for project-based, temporary, or fractional needs.</li>
+          <li>Partnering training with talent strategy.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP -->
+  <section class="section" id="leadership">
+    <h2>Leadership Development & Executive Education</h2>
+    <p class="center">
+      Transformational leadership and emotional intelligence are not buzzwords for me — they are the core of my doctoral research and my daily practice with leaders.
+    </p>
+
+    <div class="card-grid">
+      <article class="card">
+        <h3>Emotional Intelligence in Action</h3>
+        <small>Self-awareness • Self-management • Social awareness • Relationship management.</small>
+        <ul>
+          <li>Practical frameworks to help leaders manage reactions under pressure.</li>
+          <li>Coaching on conflict, feedback, and difficult conversations.</li>
+          <li>Tools to build empathy while still holding high standards.</li>
+          <li>Direct connection between EI and safety/HR outcomes.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Transformational Leadership Labs</h3>
+        <small>Inspire a shared vision • Enable others to act • Model the way.</small>
+        <ul>
+          <li>Scenario-based learning developed from your incidents and challenges.</li>
+          <li>Group labs for supervisors, managers, and high-potential talent.</li>
+          <li>Linking vision and values to everyday decisions.</li>
+          <li>Creating psychological safety without losing accountability.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Executive & Senior Leader Intensives</h3>
+        <small>Designed for executives and senior leaders.</small>
+        <ul>
+          <li>Strategic sessions connecting culture, safety, and performance.</li>
+          <li>Private coaching conversations for senior decision-makers.</li>
+          <li>Support designing change initiatives and communication plans.</li>
+          <li>Integration with HR, EHS, and operational leaders.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- SPEAKING -->
+  <section class="section" id="speaking">
+    <h2>Speaking & Keynotes</h2>
+    <p class="center">
+      Conferences, leadership retreats, safety stand-downs, faith-based events, and corporate town halls.
+    </p>
+
+    <div class="topics">
+      <div class="topic">
+        <h3>Leading with Emotional Intelligence in High-Risk Environments</h3>
+        How leaders show up during pressure, conflict, and crisis sets the tone for safety and trust.
+      </div>
+
+      <div class="topic">
+        <h3>From Compliance to Care: Transforming Safety Culture</h3>
+        Moving beyond checklists to a people-centered approach where workers feel seen, heard, and equipped to speak up.
+      </div>
+
+      <div class="topic">
+        <h3>The Heart of Leadership: Faith, Purpose & Responsibility</h3>
+        A message connecting calling, stewardship, and leadership impact.
+      </div>
+
+      <div class="topic">
+        <h3>Building HR & Safety Partnerships That Actually Work</h3>
+        Practical insights on aligning HR, safety, and operations.
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHOR -->
+  <section class="section" id="author">
+    <h2>Author & Content Creator</h2>
+    <p class="center">
+      Writing is how I slow down, think deeply, and share what I am learning with leaders, teams, and students.
+    </p>
+
+    <div class="books-grid">
+      <div class="book">
+        <div class="book-title">(Future Book Title #1)</div>
+        <div class="book-tag">Leadership • Emotional Intelligence</div>
+        <p>
+          Exploring how leaders in real-world settings can turn emotional intelligence into daily habits.
+        </p>
+      </div>
+
+      <div class="book">
+        <div class="book-title">(Future Book Title #2)</div>
+        <div class="book-tag">Safety Culture • Human Performance</div>
+        <p>
+          Connecting safety leadership, human performance, and the realities of frontline work.
+        </p>
+      </div>
+
+      <div class="book">
+        <div class="book-title">Articles, Guides & Teaching Resources</div>
+        <div class="book-tag">Available on request</div>
+        <p>
+          Articles, teaching notes, and tools for leaders, HR teams, and students.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section" id="testimonials">
+    <h2>What People Say</h2>
+    <p class="center">Here is how clients and colleagues describe working with me.</p>
+
+    <div class="testimonials-row">
+      <div class="testimonial">
+        “Dr. Pams connects safety, HR, and leadership in a way that leaders can actually use.”
+        <strong>Client Name</strong>
+        <small>Industry</small>
+      </div>
+
+      <div class="testimonial">
+        “He brings academic insight and real-world experience. Our teams value his humility and wisdom.”
+        <strong>Client Name</strong>
+        <small>Organization</small>
+      </div>
+
+      <div class="testimonial">
+        “We see him as a long-term partner — not a one-time trainer.”
+        <strong>Client Name</strong>
+        <small>Industry</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <h2>Let’s Connect</h2>
+    <p class="center">
+      Whether you need AHA training, leadership development, consulting, or a speaker for your event, I would be honored to connect.
+    </p>
+
+    <div class="contact-box">
+      <p>
+        Share your goals — training needs, culture challenges, leadership growth — and we will explore what is possible together.
+      </p>
+
+      <div class="contact-row">
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:visiondriver.pro@gmail.com">visiondriver.pro@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Phone / WhatsApp</strong>
+          <a href="tel:+18323439970">+1 (832) 343-9970</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>LinkedIn</strong>
+          <a href="https://www.linkedin.com/in/drpams" target="_blank">linkedin.com/in/drpams</a>
+        </div>
+
+        <div class="contact-item">
+          <strong>Location</strong>
+          Indianapolis, IN (Remote-friendly)
+        </div>
+      </div>
+
+      <p style="margin-top:1rem; font-size:0.85rem; color:var(--gray-400);">
+        For now, please reach out via email or phone to schedule training or consulting.
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy; <span id="year"></span> Dr. Fredlan “Pams” Mpama. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
